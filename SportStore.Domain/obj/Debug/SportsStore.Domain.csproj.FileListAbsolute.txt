@@ -16,3 +16,8 @@ G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\bin\Debug\System.We
 G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\obj\Debug\SportsStore.Domain.csprojResolveAssemblyReference.cache
 G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\obj\Debug\SportStore.Domain.dll
 G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\obj\Debug\SportStore.Domain.pdb
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\bin\Debug\SportStore.Domain.dll.config
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\bin\Debug\EntityFramework.dll
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\bin\Debug\EntityFramework.SqlServer.dll
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\bin\Debug\EntityFramework.xml
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportStore.Domain\bin\Debug\EntityFramework.SqlServer.xml

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Moq;
 using SportStore.Domain.Abstract;
 using SportStore.Domain.Entities;
+using SportStore.Domain.Concrete;
 
 namespace SportsStore.WebUI.Infrastructure
 {
@@ -30,13 +31,7 @@ namespace SportsStore.WebUI.Infrastructure
         }
         private void AddBindings()
         {
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m=>m.Products).Returns(new List<Product> {
-                new Product { Name="Football",Price=25},
-                new Product { Name="Surf board",Price=179},
-                new Product { Name="Running shone",Price=95}
-            });
-            kernel.Bind<IProductRepository>().ToConstant(mock.Object);
+            kernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
     }
 }

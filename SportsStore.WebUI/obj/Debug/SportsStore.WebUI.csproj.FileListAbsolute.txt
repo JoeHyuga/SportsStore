@@ -51,3 +51,7 @@ G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\bin\zh-Hans\System.
 G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\obj\Debug\SportsStore.WebUI.csprojResolveAssemblyReference.cache
 G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\obj\Debug\SportsStore.WebUI.dll
 G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\obj\Debug\SportsStore.WebUI.pdb
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\bin\EntityFramework.dll
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\bin\EntityFramework.SqlServer.dll
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\bin\EntityFramework.xml
+G:\项目\Asp.net源码\ProMvc5\SportStore\SportsStore.WebUI\bin\EntityFramework.SqlServer.xml
