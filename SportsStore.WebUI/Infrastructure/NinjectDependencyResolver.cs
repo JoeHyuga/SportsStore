@@ -20,18 +20,21 @@ namespace SportsStore.WebUI.Infrastructure
             AddBindings();
         }
 
-        object IDependencyResolver.GetService(Type serviceType)
+        public object GetService(Type serviceType)
         {
-            throw new NotImplementedException();
+            return kernel.TryGet(serviceType);
         }
 
-        IEnumerable<object> IDependencyResolver.GetServices(Type serviceType)
+        public IEnumerable<object> GetServices(Type serviceType)
         {
-            throw new NotImplementedException();
+            return kernel.GetAll(serviceType);
         }
         private void AddBindings()
         {
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
+            //Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            //mock.Setup(m => m.Products).Returns(new List<Product> { new Product { Name="ff",Price=33,CateGory="1",ProductID=1} });
+            //kernel.Bind<IProductRepository>().ToConstant(mock.Object);
         }
     }
 }
