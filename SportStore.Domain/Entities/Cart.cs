@@ -11,8 +11,7 @@ namespace SportStore.Domain.Entities
         private List<CartLine> lineCollection = new List<CartLine>();
         public void AddItem(Product product, int quantity)
         {
-            CartLine line = lineCollection.Where(p => p.Product.ProductID
-              == product.ProductID).FirstOrDefault();
+            CartLine line = lineCollection.Where(p => p.Product.ProductID== product.ProductID).FirstOrDefault();
             if (line == null)
             {
                 lineCollection.Add(new CartLine{Product = product,Quantity = quantity});

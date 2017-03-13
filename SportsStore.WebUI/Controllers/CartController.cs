@@ -45,6 +45,7 @@ namespace SportsStore.WebUI.Controllers
             Cart cart = (Cart)Session["Cart"];
             if (cart == null)
             {
+                cart = new Cart();
                 Session["Cart"] = cart;
             }
             return cart;
