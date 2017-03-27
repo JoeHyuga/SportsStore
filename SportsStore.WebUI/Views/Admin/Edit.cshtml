@@ -3,6 +3,9 @@
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    //客户端禁用验证，webconfig中也进行相同属性设置
+    HtmlHelper.ClientValidationEnabled = false;
+    HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
 }
 <div class="panel">
     <div class="panel-heading">
@@ -11,7 +14,7 @@
 </div>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit","Admin"))
 {
     <div class="panel-body">
         @Html.HiddenFor(m=>m.ProductID)
@@ -29,6 +32,7 @@
                     {
                         @Html.TextBox(property.PropertyName, null
                        ,new  {@class="form-control" })
+                        @Html.ValidationMessage(property.PropertyName)
                     }
                 </div>
             }
@@ -38,6 +42,7 @@
         <input type="submit" value="Save" class="btn btn-primary" />
         @Html.ActionLink("Cancel and return to List", "Index",null,
        new { @class="btn btn-default"})
+       
     </div>
     
 }
