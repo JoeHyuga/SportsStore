@@ -25,20 +25,6 @@ namespace SportsStore.WebUI.Controllers
             Product product = repository.Products.FirstOrDefault(p => p.ProductID == productId);
             return View(product);
         }
-        [HttpPost]
-        public ActionResult Edit(Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                repository.SaveProduct(product);
-                TempData["message"] = string.Format("{0} has been saved", product.Name);
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return View(product);
-            }
-        }
         public ViewResult Creat()
         {
             return View("Edit", new Product());
@@ -52,6 +38,26 @@ namespace SportsStore.WebUI.Controllers
                 TempData["message"] = string.Format("{0} was deleted", dbEntry.Name);
             }
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public ActionResult Edit(Product product, HttpPostedFileBase image = null)
+        {
+            if (ModelState.IsValid)
+            {
+                if (image != null)
+                {
+                    product.ImageMimeType = image.ContentType;
+                    product.ImageData = new byte[image.ContentLength];
+                    image.InputStream.Read(product.ImageData, 0, image.ContentLength);
+                }
+                repository.SaveProduct(product);
+                TempData["message"] = string.Format("{0} has been saved", product.Name);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(product);
+            }
         }
     }
 }
